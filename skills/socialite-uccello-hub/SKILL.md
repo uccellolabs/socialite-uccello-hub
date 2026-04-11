@@ -12,24 +12,6 @@ Uccello Hub acts as an OAuth2 authorization server (Laravel Passport). This skil
 
 ## 1. Install the package
 
-The package is a local path dependency until published on Packagist. Add it via a path repository in `composer.json`:
-
-```json
-{
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../package/socialite-uccello-hub"
-        }
-    ],
-    "require": {
-        "uccellolabs/socialite-uccello-hub": "*"
-    }
-}
-```
-
-Then run:
-
 ```bash
 composer require uccellolabs/socialite-uccello-hub
 ```
