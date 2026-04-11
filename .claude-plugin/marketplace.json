@@ -1,0 +1,24 @@
+{
+  "name": "socialite-uccello-hub",
+  "owner": {
+    "name": "uccellolabs"
+  },
+  "metadata": {
+    "description": "Claude Code skill for Uccello Hub OAuth2 authentication via Laravel Socialite",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "socialite-uccello-hub",
+      "source": "./",
+      "description": "Installs and wires up the uccellolabs/socialite-uccello-hub package to authenticate users via Uccello Hub (OAuth2/Passport) in any Laravel application.",
+      "version": "1.0.0",
+      "author": {
+        "name": "uccellolabs"
+      },
+      "keywords": ["laravel", "socialite", "oauth", "authentication", "uccello-hub"],
+      "category": "development",
+      "strict": false
+    }
+  ]
+}

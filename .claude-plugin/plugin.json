@@ -1,0 +1,11 @@
+{
+  "name": "socialite-uccello-hub",
+  "description": "Installs and wires up the uccellolabs/socialite-uccello-hub package to authenticate users via Uccello Hub (OAuth2/Passport) in any Laravel application.",
+  "version": "1.0.0",
+  "author": {
+    "name": "uccellolabs"
+  },
+  "license": "MIT",
+  "keywords": ["laravel", "socialite", "oauth", "authentication", "uccello-hub"],
+  "skills": ["./skills/socialite-uccello-hub"]
+}
