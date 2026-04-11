@@ -1,0 +1,24 @@
+{
+    "name": "uccellolabs/socialite-uccello-hub",
+    "description": "Uccello Hub OAuth2 provider for Laravel Socialite",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "laravel/socialite": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "UccelloLabs\\SocialiteUccelloHub\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "UccelloLabs\\SocialiteUccelloHub\\UccelloHubServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
