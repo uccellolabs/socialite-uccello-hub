@@ -61,15 +61,28 @@ $user->getRaw()['current_team_id'];
 | `preferred_locale` | string\|null | Language preference (`fr`, `en`, …) |
 | `current_team_id` | integer\|null | Active team/workspace |
 
-## Claude Code skill
+## AI skills (Claude Code & Cursor)
 
-This repo includes a [Claude Code](https://claude.ai/code) plugin that guides Claude through the full integration (routes, controller, migration, pitfalls).
+This package ships an AI skill that guides Claude and Cursor through the full integration (routes, controller, migration, pitfalls).
 
-**Install the skill:**
+**With [Laravel Boost](https://github.com/laravel/boost)** — the skill is auto-discovered and installed when you run:
 
 ```bash
-claude plugin marketplace add github:uccellolabs/socialite-uccello-hub
-claude plugin install socialite-uccello-hub
+php artisan boost:install --skills
+```
+
+**Without Laravel Boost** — run the dedicated install command:
+
+```bash
+php artisan uccello-hub:install
+```
+
+This copies the skill to `.claude/skills/` (Claude Code) and `.cursor/rules/` (Cursor).
+
+**Manual publish:**
+
+```bash
+php artisan vendor:publish --tag=claude-skills
 ```
 
 ## License
