@@ -12,7 +12,7 @@ class InstallCommand extends Command
 
     public function handle(): int
     {
-        $source = __DIR__ . '/../../skills/socialite-uccello-hub';
+        $source = __DIR__ . '/../../resources/boost/skills/socialite-uccello-hub';
 
         $targets = [
             'Claude Code' => base_path('.claude/skills/socialite-uccello-hub'),

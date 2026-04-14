@@ -20,7 +20,7 @@ class UccelloHubServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../skills' => base_path('.claude/skills'),
+                __DIR__ . '/../resources/boost/skills' => base_path('.claude/skills'),
             ], 'claude-skills');
 
             $this->commands([
