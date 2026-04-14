@@ -65,19 +65,15 @@ $user->getRaw()['current_team_id'];
 
 This package ships an AI skill that guides Claude and Cursor through the full integration (routes, controller, migration, pitfalls).
 
-**With [Laravel Boost](https://github.com/laravel/boost)** — the skill is auto-discovered and installed when you run:
+The skill is installed automatically the first time any `php artisan` command runs after `composer require`. It is copied to `.claude/skills/` (Claude Code) and `.cursor/rules/` (Cursor) — no manual step needed.
 
-```bash
-php artisan boost:install --skills
-```
+If you use [Laravel Boost](https://github.com/laravel/boost), the skill is also auto-discovered by `boost:install --skills`.
 
-**Without Laravel Boost** — run the dedicated install command:
+**Force reinstall:**
 
 ```bash
 php artisan uccello-hub:install
 ```
-
-This copies the skill to `.claude/skills/` (Claude Code) and `.cursor/rules/` (Cursor).
 
 **Manual publish:**
 
