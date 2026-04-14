@@ -26,6 +26,35 @@ class UccelloHubServiceProvider extends ServiceProvider
             $this->commands([
                 InstallCommand::class,
             ]);
+
+            $this->installSkills();
+        }
+    }
+
+    protected function installSkills(): void
+    {
+        $source = __DIR__ . '/../resources/boost/skills/socialite-uccello-hub';
+
+        foreach ([
+            base_path('.claude/skills/socialite-uccello-hub'),
+            base_path('.cursor/rules/socialite-uccello-hub'),
+        ] as $target) {
+            if (is_dir($target)) {
+                continue;
+            }
+
+            if (! is_dir(dirname($target))) {
+                mkdir(dirname($target), 0755, true);
+            }
+
+            mkdir($target, 0755, true);
+
+            foreach (scandir($source) as $file) {
+                if ($file === '.' || $file === '..') {
+                    continue;
+                }
+                copy($source . DIRECTORY_SEPARATOR . $file, $target . DIRECTORY_SEPARATOR . $file);
+            }
         }
     }
 }
